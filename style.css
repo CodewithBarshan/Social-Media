@@ -1,0 +1,744 @@
+@font-face {
+  font-family: 'Nippo Medium';
+  src: url(OTF/Nippo-Medium.otf);
+}
+
+@font-face {
+  font-family: 'Nippo Regular';
+  src: url(OTF/Nippo-Regular.otf);
+}
+
+:root {
+	--background-root: #ffffff;
+	--background-default: #F0F1F2;
+	--background-higher: #E4E5E6;
+	--background-highest: #cfcfcf;
+
+	--accent-primary: #FF66C6;
+	--accent-secondary: #e151ac;
+	--accent-tertiary: #c34394;
+	--accent-transparent: #FF66C633;
+
+
+	--foreground-default: #000000;
+	--foreground-dimmer: #3D4047;
+	--foreground-dimmest: #5C5F66;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border-radius: 0;
+}
+
+*:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+	background: var(--background-root);
+	color: var(--foreground-default);
+	font-family: 'Nippo Medium';
+	position: relative;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 16px;
+	background: var(--background-root);
+	cursor: pointer;
+	position: relative;
+	font-size: 16px;
+	font-family: 'Nippo Medium';
+	color: var(--foreground-default);
+}
+
+button > ion-icon {
+	width: 24px;
+	height: 24px;
+	color: var(--foreground-default);
+}
+
+button:hover {
+	background: var(--background-default);
+}
+
+button:active {
+	background: var(--background-higher);
+}
+
+	button:focus-visible {
+	position: relative;
+}
+
+button:focus-visible::before {
+	content: "";
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border: 2px solid var(--foreground-default);
+	position: absolute;
+}
+
+button.cta {
+	background: var(--accent-primary);
+}
+
+button.cta:hover {
+	background: var(--accent-secondary);
+}
+
+button.cta:active {
+	background: var(--accent-tertiary);
+}
+
+button.cta:focus-visible::before {
+	border: 2px solid var(--background-default);
+}
+
+a:focus-visible {
+	position: relative;
+}
+
+a:focus-visible::before {
+	content: "";
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border: 2px solid var(--foreground-default);
+	position: absolute;
+}
+
+input {
+	font-size: 16px;
+	font-family: 'Nippo Medium';
+}
+
+input:hover {
+	background: var(--background-default);
+}
+
+input:active {
+	background: var(--background-higher);
+}
+
+input:focus {
+	position: relative;
+}
+
+input:focus::before {
+	content: "";
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border: 2px solid var(--foreground-default);
+	position: absolute;
+}
+
+main {
+	display: flex;
+/* 	height: 100%; */
+}
+
+main sidebar {
+	display: flex;
+	flex-direction: column;
+	width: 256px;
+	border: 2px solid var(--foreground-default);
+	border-bottom: none;
+	height: 100%;
+	position: fixed;
+	background: var(--background-root);
+}
+
+main sidebar > * {
+	flex: 1;
+}
+
+main sidebar .logo {
+	padding: 12px;
+	display: flex;
+	gap: 8px;
+	max-height: 56px;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid var(--foreground-default);
+}
+
+main sidebar .logo svg {
+	width: 32px;
+	height: 32px;
+}
+
+main sidebar .profile {
+	min-height: 300px;
+	max-height: 300px;
+	border-bottom: 2px solid var(--foreground-default);
+	margin-top: -1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(153deg, rgb(42 121 233 / 0%) 0%, #4c87e8 100%);
+}
+
+main sidebar .profile .inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+main sidebar .profile .inner img {
+	width: 150px;
+	height: 150px;
+	border: 2px solid var(--foreground-default);
+}
+
+main sidebar .profile .inner .name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main sidebar .profile .inner .name span {
+	font-family: 'Nippo Regular';
+	color: var(--foreground-dimmer);
+}
+	
+main sidebar .stats {
+	display: flex;
+	padding: 8px 12px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--foreground-default);
+	margin-top: -1px;
+	max-height: 68px;
+}
+
+main sidebar .stats .stat {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main sidebar .stats .stat p {
+	font-family: 'Nippo Regular';
+	color: var(--foreground-dimmer);
+}
+
+main sidebar .links {
+	display: flex;
+	flex-direction: column;
+}
+
+main sidebar .links a {
+	display: flex;
+	gap: 8px;
+	padding: 16px;
+	border-bottom: 2px solid var(--foreground-default);
+	color: var(--foreground-default);
+	font-size: 16px;
+	align-items: center;
+}
+
+main sidebar .links a:hover {
+	background: var(--background-default);
+}
+
+main sidebar .links a:active {
+	background: var(--background-higher);
+}
+
+main sidebar .links a:focus-visible {
+	position: relative;
+}
+
+main sidebar .links a:focus-visible::before {
+	content: "";
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border: 2px solid var(--foreground-default);
+	position: absolute;
+}
+
+main sidebar .links a ion-icon {
+	width: 24px;
+	height: 24px;
+	color: var(--foreground-dimmest);
+}
+
+main sidebar .links a.selected {
+	background: var(--accent-transparent);
+}
+
+main sidebar .links a.selected ion-icon {
+	color: var(--foreground-default);
+}
+
+main content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin-left: 256px;
+	border-right: 2px solid var(--foreground-default);
+}
+
+main content header {
+	display: flex;
+	height: 58px;
+	border-bottom: 2px solid var(--foreground-default);
+	border-top: 2px solid var(--foreground-default);
+	position: fixed;
+	width: calc(100% - 256px);
+	z-index: 2;
+}
+
+main content header .search {
+	flex: 1;
+	position: relative;
+/* 	border-right: 2px solid var(--foreground-default); */
+}
+
+main content header .search input {
+	width: calc(100% + 1px);
+	height: 100%;
+	padding: 16px;
+	padding-left: 48px;
+	font-size: 16px;
+	border: none;
+}
+
+main content header .search ion-icon {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	width: 24px;
+	height: 24px;
+	z-index: 3;
+}
+
+main content header .right {
+	display: flex;
+}
+
+main content header .right button {
+	height: 100%;
+	border: none;
+	border-left: 2px solid var(--foreground-default);
+}
+
+main content header .right button.cta {
+	border-right: 2px solid var(--foreground-default);
+}
+
+main content .feed {
+	padding: 32px 64px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 56px;
+}
+
+main content .feed .row {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+main content .feed .row .column {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	flex: 1;
+	min-width: 256px;
+	
+}
+
+main content .feed .row .column .card {
+	display: flex;
+	align-items: flex-end;
+	border: 2px solid var(--foreground-default);
+}
+
+main content .feed .row .column .card.one {
+	background-image: url('images/posts/1.png');
+	background-size: cover;
+	height: 389px;
+}
+
+main content .feed .row .column .card.two {
+	background-image: url('images/posts/2.png');
+	background-size: cover;
+	height: 226px;
+}
+
+main content .feed .row .column .card.three {
+	background-image: url('images/posts/3.png');
+	background-size: cover;
+	height: 320px;
+}
+
+main content .feed .row .column .card.four {
+	background-image: url('images/posts/4.png');
+	background-size: cover;
+	height: 428px;
+}
+
+main content .feed .row .column .card.five {
+	background-image: url('images/posts/5.png');
+	background-size: cover;
+	height: 399px;
+}
+
+main content .feed .row .column .card.six {
+	background-image: url('images/posts/6.png');
+	background-size: cover;
+	height: 232px;
+}
+
+main content .feed .row .column .card.seven {
+	background-image: url('images/posts/7.png');
+	background-size: cover;
+	height: 213px;
+}
+
+main content .feed .row .column .card.eight {
+	background-image: url('images/posts/8.png');
+	background-size: cover;
+	height: 206px;
+}
+
+main content .feed .row .column .card.nine {
+	background-image: url('images/posts/9.png');
+	background-size: cover;
+	height: 478px;
+}
+
+main content .feed .row .column .card.ten {
+	background-image: url('images/posts/10.png');
+	background-size: cover;
+	height: 500px;
+}
+
+main content .feed .row .column .card.eleven {
+	background-image: url('images/posts/11.png');
+	background-size: cover;
+	height: 258px;
+}
+
+main content .feed .row .column .card.twelve {
+	background-image: url('images/posts/12.png');
+	background-size: cover;
+	height: 400px;
+}
+
+main content .feed .row .column .card .bottom {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid var(--foreground-default);
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(2px);
+	flex: 1;
+}
+
+main content .feed .row .column .card .bottom a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 8px;
+	color: var(--foreground-default);
+}
+
+main content .feed .row .column .card .bottom a:hover {
+	background: rgba(255, 255, 255, 0.3);	
+}
+	
+main content .feed .row .column .card .bottom a:active {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+main content .feed .row .column .card .bottom .left {
+	display: flex;
+	align-items: center;
+	color: var(--foreground-default);
+	width: 100%;
+}
+
+main content .feed .row .column .card .bottom .left img {
+	width: 40px;
+	height: 40px;
+	border-right: 2px solid var(--foreground-default);
+}
+
+main content .feed .row .column .card .bottom .left span {
+	font-family: 'Nippo Regular';	
+}
+
+main content .feed .row .column .card .bottom .right {
+	display: flex;
+}
+
+main content .feed .row .column .card .bottom .right button {
+	border: none;
+	border-left: 2px solid var(--foreground-default);
+	width: 40px;
+	height: 40px;
+	padding: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+}
+
+main content .feed .row .column .card .bottom .right button ion-icon {
+	width: 20px;
+	height: 20px;
+}
+
+main content .feed .row .column .card .bottom .right button:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+main content .feed .row .column .card .bottom .right button:active {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+main content .feed .row .column .card .bottom .right button svg {
+	width: 16px;
+	height: 16px;
+}
+
+.scrim {
+	display: none;
+}
+
+.scrim.visible-scrim {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	background: rgba(0 0 0 / 40%);
+}
+
+aside.sign-up-dialog {
+	position: fixed;
+	z-index: 10;
+	box-shadow: 16px 16px 0px 0px #00000099;
+	width: 400px;
+	display: none;
+	flex-direction: column;
+	background: var(--background-root);
+	border: 2px solid var(--foreground-default);
+	left: 40%;
+  top: 20%;
+}
+
+aside.sign-up-dialog.visible-dialog {
+	display: flex;
+}
+
+aside.sign-up-dialog header {
+	display: flex;
+	justify-content: space-between;
+	background: var(--background-default);
+	border-bottom: 2px solid var(--foreground-default);
+}
+
+aside.sign-up-dialog header .left {
+	flex: 1;
+	align-items: center;
+	display: flex;
+	padding-left: 8px;
+	border-right: 2px solid var(--foreground-default);
+}
+
+aside.sign-up-dialog header button {
+	padding: 4px;
+	width: 32px;
+	height: 32px;
+	background: var(--background-default);
+	border: none;
+}
+
+aside.sign-up-dialog header button:hover {
+	background: var(--background-higher);
+}
+
+aside.sign-up-dialog header button:active {
+	background: var(--background-highest);
+}
+
+aside.sign-up-dialog content {
+	padding: 16px;
+	display: flex;
+	gap: 24px;
+	flex-direction: column;
+	flex: 1;
+}
+
+aside.sign-up-dialog content .main {
+	display: flex;
+	gap: 8px;
+	flex-direction: column;
+	flex: 1;
+}
+
+aside.sign-up-dialog content .main .field {
+	display: flex;
+	gap: 8px;
+	flex-direction: column;
+	flex: 1;
+}
+
+aside.sign-up-dialog content .main .field > * {
+	flex: 1;
+}
+
+aside.sign-up-dialog content .main .field input {
+	padding: 8px;
+	border: 2px solid var(--foreground-default);
+}
+
+aside.sign-up-dialog content .main .field input::placeholder {
+	color: var(--foreground-dimmest);
+	font-family: 'Nippo Regular';
+}
+
+aside.sign-up-dialog content .main .field button {
+	padding: 8px;
+	border: 2px solid var(--foreground-default);
+}
+
+aside.sign-up-dialog content .main .field button ion-icon {
+	width: 16px;
+	height: 16px;	
+}
+
+aside.sign-up-dialog content .main .bottom {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+aside.sign-up-dialog content .main .bottom p {
+	color: var(--foreground-dimmer);
+	font-family: 'Nippo Regular';
+}
+
+aside.sign-up-dialog content .main .bottom a {
+	color: var(--foreground-default);
+}
+
+footer {
+	margin-top: 64px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+footer .placeholder {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	max-width: 600px;
+	align-items: center;
+	padding: 32px;
+	border: 2px dashed var(--accent-primary);
+	font-family: 'Nippo Regular';
+	text-align: center;
+}
+
+footer .placeholder button {
+	width: fit-content;
+	border: 2px solid var(--foreground-default);
+}
+
+
+@media only screen and (max-width: 1100px) {
+	main content {
+		margin-left: 64px;
+	}
+	
+	main content header {
+		width: calc(100% - 64px);
+	}
+
+	main sidebar {
+		width: 64px;
+	}
+
+	main sidebar .logo h3 {
+		display: none;
+	}
+
+	main sidebar .profile {
+		min-height: 64px;
+		max-height: 64px;
+		border-bottom: none;
+	}
+	
+	main sidebar .profile .inner img {
+		width: 64px;
+		height: 64px;
+		border-right: 1px solid var(--foreground-default);
+		border-top: 1px solid var(--foreground-default);
+	}
+
+	main sidebar .links a {
+		justify-content: center;
+	}
+	
+	main sidebar .profile .inner .name, main sidebar .links a span, main sidebar h2 {
+		display: none;
+	}
+
+	main content .feed {
+		padding: 32px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	main content header .right button.cta span {
+		display: none;
+	}
+
+	main content .feed {
+		padding: 16px;
+	}
+}
+

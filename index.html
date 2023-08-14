@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Social Media Site UI</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="body">
+	<div class="scrim" id="scrim" onclick="toggleSignUpDialog()"></div>
+
+	<aside class="sign-up-dialog" id="sign-up-dialog">
+		<header>
+			<div class="left">
+				<h4>Sign Up</h4>
+			</div>
+
+			<button onclick="toggleSignUpDialog();">
+				<ion-icon name="close-outline" role="img" class="md hydrated"></ion-icon>
+			</button>
+		</header>
+
+		<content>
+			<h2>Join Social Site</h2>
+
+			<div class="main">
+				<div class="field">
+					<input type="text" placeholder="Email or phone number">
+
+					<input type="text" placeholder="Username">
+
+					<input type="password" placeholder="Password">
+
+					<button class="cta">
+						<ion-icon name="person-add-outline" role="img" class="md hydrated"></ion-icon>
+
+						<span>Sign up</span>
+					</button>
+				</div>
+
+				<div class="bottom">
+					<p>Already have an account?</p>
+					<a href="">Log in</a>
+				</div>
+			</div>
+		</content>
+	</aside>
+
+	<main>
+		<sidebar>
+			<div class="logo">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<g clip-path="url(#clip0_235_526)">
+						<path d="M20 0C8.9543 0 0 8.9543 0 20C11.0457 20 20 11.0457 20 0Z" fill="#FF66C6" />
+						<path d="M20 40C31.0457 40 40 31.0457 40 20C28.9543 20 20 28.9543 20 40Z" fill="#FF66C6" />
+						<path d="M20 0C31.0457 0 40 8.9543 40 20C28.9543 20 20 11.0457 20 0Z" fill="#4639F8" />
+						<path d="M20 40C8.9543 40 -9.65645e-07 31.0457 0 20C11.0457 20 20 28.9543 20 40Z" fill="#4639F8" />
+					</g>
+					<defs>
+						<clipPath id="clip0_235_526">
+							<rect width="40" height="40" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+
+				<h2>SocialSite</h2>
+			</div>
+
+			<div class="profile">
+				<div class="inner">
+					<img src="images/pfp.png">
+					<div class="name">
+						<h3>Barshan Mukherjee.</h3>
+						<span>@Barshan Mukherjee</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- 			<div class="stats">
+				<div class="stat">
+					<h4>100</h4>
+					<p>posts</p>
+				</div>
+
+				<div class="stat">
+					<h4>100</h4>
+					<p>followers</p>
+				</div>
+
+				<div class="stat">
+					<h4>100</h4>
+					<p>following</p>
+				</div>
+			</div> -->
+
+			<div class="links">
+				<a href="" class="selected">
+					<ion-icon name="grid-outline"></ion-icon>
+
+					<span>My Feed</span>
+				</a>
+
+				<a href="">
+					<ion-icon name="sparkles-outline"></ion-icon>
+
+					<span>Explore</span>
+				</a>
+
+				<a href="">
+					<ion-icon name="person-outline"></ion-icon>
+
+					<span>Profile</span>
+				</a>
+
+				<a href="">
+					<ion-icon name="settings-outline"></ion-icon>
+
+					<span>Settings</span>
+				</a>
+			</div>
+		</sidebar>
+
+		<content>
+			<header>
+				<div class="search">
+					<ion-icon name="search-outline"></ion-icon>
+					<input placeholder="Search">
+				</div>
+
+				<div class="right">
+					<button>
+						<ion-icon name="notifications-outline"></ion-icon>
+					</button>
+
+					<button>
+						<ion-icon name="chatbubble-outline"></ion-icon>
+					</button>
+
+					<button class="cta" onclick="toggleSignUpDialog();">
+						<ion-icon name="add-outline"></ion-icon>
+
+						<span><span>Share your content</span></span>
+					</button>
+				</div>
+			</header>
+
+			<div class="feed">
+				<h1>My Feed</h1>
+
+				<div class="row">
+					<div class="column">
+						<div class="card one">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card four">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card seven">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card twelve">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+                
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="card two">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card five">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card eight">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card ten">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="card three">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card six">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card nine">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="card eleven">
+							<div class="bottom">
+								<div class="left">
+									<img src="images/pfp.png">
+									<a href="">
+										<span>@BarshanMukherje</span>
+									</a>
+								</div>
+
+								<div class="right">
+									<button>
+										<ion-icon name="share-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="chatbubble-outline"></ion-icon>
+									</button>
+
+									<button>
+										<ion-icon name="heart-outline"></ion-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<footer>
+					<div class="placeholder">
+						<h4>You've reached the end of your feed. Feeling creative?</h4>
+
+						<button class="cta" onclick="toggleSignUpDialog();">
+							<ion-icon name="add-outline" role="img" class="md hydrated"></ion-icon>
+
+							<span>Upload your content</span>
+						</button>
+				</footer>
+			</div>
+		</content>
+	</main>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
